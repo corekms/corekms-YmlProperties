@@ -1,0 +1,10 @@
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.mkyong: DEBUG
+email: test@mkyong.com
+thread-pool: 10
+app:
+  team: hi
+  team-size: 5
+  team-leader: there
