@@ -1,10 +1,33 @@
-logging:
-  level:
-    org.springframework.web: ERROR
-    com.mkyong: DEBUG
-email: test@mkyong.com
-thread-pool: 10
+spring:
+  profiles:
+    active: prod
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
 app:
   team: hi
-  team-size: 5
-  team-leader: there
+  team-size: 1
+  team-leader: dev
+
+---
+spring:
+  config:
+    activate:
+      on-profile: staging
+app:
+  team: hi
+  team-size: 2
+  team-leader: staging
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod    
+app:
+  team: hi
+  team-size: 3
+  team-leader: prod

@@ -41,7 +41,6 @@ public class Team {
 		this.teamLeader = teamLeader;
 	}
 
-
 	@Override
 	public String toString() {
 		return "{" +
