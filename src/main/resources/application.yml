@@ -8,7 +8,7 @@ spring:
     activate:
       on-profile: dev
 app:
-  team: hi
+  team-name: hi
   team-size: 1
   team-leader: dev
 
@@ -18,7 +18,7 @@ spring:
     activate:
       on-profile: staging
 app:
-  team: hi
+  team-name: hi
   team-size: 2
   team-leader: staging
 
@@ -28,6 +28,6 @@ spring:
     activate:
       on-profile: prod    
 app:
-  team: hi
+  team-name: hi
   team-size: 3
   team-leader: prod

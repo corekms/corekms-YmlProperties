@@ -1,50 +1,49 @@
 package com.example.ymlprop;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
-import org.springframework.format.annotation.NumberFormat;
 import org.springframework.validation.annotation.Validated;
 
 @Component
 @ConfigurationProperties(prefix="app")
 @Validated
 public class Team {
-	// @NotBlank
-	private String team;
-	@NumberFormat
-	private int teamSize;
-	// @Size(max=30)
-	private String teamLeader;
-	// @NotNull
+	
+	static private String TEAM_NAME;
+	static private int TEAM_SIZE;
+	static private String TEAM_LEADER;
 
-	public String getTeam() {
-		return team;
+	public static String getTeamName() {
+		return TEAM_NAME;
 	}
 
-	public void setTeam(String team) {
-		this.team = team;
+	@Value("${app.team-name}")
+	public void setTeamName(String teamName) {
+		Team.TEAM_NAME = teamName;
 	}
 
-	public int getTeamSize() {
-		return teamSize;
+	public static int getTeamSize() {
+		return TEAM_SIZE;
 	}
-
+	@Value("${app.team-size}")
 	public void setTeamSize(int teamSize) {
-		this.teamSize = teamSize;
+		Team.TEAM_SIZE = teamSize;
 	}
 
-	public String getTeamLeader() {
-		return teamLeader;
+	public static String getTeamLeader() {
+		return TEAM_LEADER;
 	}
 
+	@Value("${app.team-leader}")
 	public void setTeamLeader(String teamLeader) {
-		this.teamLeader = teamLeader;
+		Team.TEAM_LEADER = teamLeader;
 	}
 
 	@Override
 	public String toString() {
 		return "{" +
-			" team='" + getTeam() + "'" +
+			" team='" + getTeamName() + "'" +
 			", teamSize='" + getTeamSize() + "'" +
 			", teamLeader='" + getTeamLeader() + "'" +
 			"}";

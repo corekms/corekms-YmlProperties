@@ -2,14 +2,14 @@ package com.example.ymlprop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class YmlPropApplication {
 	public static void main(String[] args) {
-		final ApplicationContext ctx = SpringApplication.run(YmlPropApplication.class, args);
-		final Team team = ctx.getBean(Team.class);
+		SpringApplication.run(YmlPropApplication.class, args);
 		System.out.println("--- Team ---");
-		System.out.println(team);
+		System.out.println(Team.getTeamLeader());
+		System.out.println(Team.getTeamSize());
+		System.out.println(Team.getTeamName());
 	}
 } 
