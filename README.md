@@ -1,35 +1,6 @@
 # YmlProperties
-apllication.yml
-spring:
-  profiles:
-    active: prod
+application.yml 파일에 dev, staging, prod 변수를 정의합니다.
 
----
-spring:
-  config:
-    activate:
-      on-profile: dev
-app:
-  team: hi
-  team-size: 1
-  team-leader: dev
+spring: profiles: active: 에 적용대상을 정의합니다.
 
----
-spring:
-  config:
-    activate:
-      on-profile: staging
-app:
-  team: hi
-  team-size: 2
-  team-leader: staging
-
----
-spring:
-  config:
-    activate:
-      on-profile: prod    
-app:
-  team: hi
-  team-size: 3
-  team-leader: prod
+kebab-case, snake_case, camelCase로 작성한 프로퍼티는 모두 camelCase 로 정의한 필드에 바인딩됩니다.
