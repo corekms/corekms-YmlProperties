@@ -17,7 +17,7 @@ public class Team {
 	}
 
 	@Value("${app.team-name}")
-	public void setTeamName(String teamName) {
+	public void setTeamName(String teamName) { 
 		Team.TEAM_NAME = teamName;
 	}
 
