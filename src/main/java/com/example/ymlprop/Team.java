@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class Team {
 	
 	static private String TEAM_NAME;
-	static private int TEAM_SIZE;
+	static private String TEAM_SIZE;
 	static private String TEAM_LEADER;
 
 	public static String getTeamName() {
@@ -21,11 +21,11 @@ public class Team {
 		Team.TEAM_NAME = teamName;
 	}
 
-	public static int getTeamSize() {
+	public static String getTeamSize() {
 		return TEAM_SIZE;
 	}
 	@Value("${app.team-size}")
-	public void setTeamSize(int teamSize) {
+	public void setTeamSize(String teamSize) {
 		Team.TEAM_SIZE = teamSize;
 	}
 

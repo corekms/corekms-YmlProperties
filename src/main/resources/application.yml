@@ -9,7 +9,7 @@ spring:
       on-profile: dev
 app:
   team-name: hi
-  team-size: 1
+  team-size: ${random.uuid}
   team-leader: dev
 
 ---
@@ -19,7 +19,7 @@ spring:
       on-profile: staging
 app:
   team-name: hi
-  team-size: 2
+  team-size: ${random.uuid}
   team-leader: staging
 
 ---
@@ -29,5 +29,5 @@ spring:
       on-profile: prod    
 app:
   team-name: hi
-  team-size: 3
+  team-size: ${random.uuid}
   team-leader: prod
